@@ -29,27 +29,23 @@ class BankAccount:
         else:
             self._balance = 0
 
+account_1 = BankAccount()
+print(account_1.balance)  # Output: 0
 
-# In[2]:
+account_2 = BankAccount(100)
+print(account_2.balance)  # Output: 100
 
+account_3 = BankAccount(-100)
+print(account_3.balance)  # Output: 0
 
-bank_account = BankAccount()
+account_1._balance = -10    # Problem remains
+account_2._balance = 1000
+account_3._balance = 0
 
-
-# In[7]:
-
-
-bank_account.balance = -60
-
-
-# In[8]:
-
-
-bank_account.balance
-
-
-# In[ ]:
-
+print()
+print(account_1.balance)  # Output: 0
+print(account_2.balance)  # Output: 100
+print(account_3.balance)
 
 
 
